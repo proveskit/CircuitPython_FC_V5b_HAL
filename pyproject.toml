@@ -1,0 +1,32 @@
+[project]
+name = "proves-circuitpython-sx1280"
+version = "1.0.2"
+description = "CircuitPython driver for the Semtech SX1280 LoRa radio transceiver."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "adafruit-circuitpython-typing==1.11.2",
+    "circuitpython-stubs==9.2.5",
+    "pyright[nodejs]==1.1.399",
+    "pre-commit==4.0.1",
+]
+
+[tool.ruff.format]
+# Use `\n` line endings for all files
+line-ending = "lf"
+
+[tool.setuptools.packages.find]
+exclude = ["typings*"]
+include = ["proves_sx1280*"]
+
+[tool.pyright]
+include = ["sx1280.py"]
+exclude = [
+    "**/__pycache__",
+    ".venv",
+    ".git",
+    "examples",
+    "typings",
+]
+stubPath = "./typings"
+reportMissingModuleSource = false
