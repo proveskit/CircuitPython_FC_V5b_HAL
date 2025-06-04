@@ -1,7 +1,7 @@
 [project]
-name = "proves-circuitpython-sx1280"
-version = "1.0.2"
-description = "CircuitPython driver for the Semtech SX1280 LoRa radio transceiver."
+name = "circuitpython_fc_v5b_hal"
+version = "1.0.0"
+description = "A Simple CircuitPython Hardware Abstraction Layer for PROVES V5b Flight Controller Boards."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -17,10 +17,10 @@ line-ending = "lf"
 
 [tool.setuptools.packages.find]
 exclude = ["typings*"]
-include = ["proves_sx1280*"]
+include = ["proves_fc_v5b*"]
 
 [tool.pyright]
-include = ["sx1280.py"]
+include = ["proves_fc_v5b.py"]
 exclude = [
     "**/__pycache__",
     ".venv",
